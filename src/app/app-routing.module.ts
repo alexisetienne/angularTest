@@ -12,6 +12,9 @@ const routes: Routes = [
 {
       path:"new-product",
       component:ProductComponent
+},
+{
+      path:"", redirectTo:"/product",pathMatch:'full'
 }
 ];
 

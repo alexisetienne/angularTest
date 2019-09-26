@@ -6,17 +6,20 @@
       <button class="btn btn-primary" (click)="onGetProduct()">product</button>
     </div>
   <div class="panel-body">
-   <table>
+   <table *ngIf="product" class="table table-stripped">
      <tr>
        <th>ID</th><th>NAME</th><th>PRICE</th><th>QUANTITY</th>
      </tr>
-     <tr *ngfor="let p of product._embedded.products">
+     <tr *ngFor="let p of product._embedded.products">
        <td>{{p.id}}</td>
        <td>{{p.name}}</td>
        <td>{{p.price}}</td>
        <td>{{p.quantity}}</td>
      </tr>
    </table>
+    <ul>
+      <li *ngFor="let p of pages">{{}}</li>
+    </ul>
   </div>
 </div>
 </div>
